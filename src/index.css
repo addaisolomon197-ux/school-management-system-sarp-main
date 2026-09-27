@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-width: 320px;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Print styles for report cards */
+@media print {
+  body {
+    background: white !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+  .print\:hidden {
+    display: none !important;
+  }
+  .print\:border-0 {
+    border: 0 !important;
+  }
+  .print\:shadow-none {
+    box-shadow: none !important;
+  }
+  .print\:p-0 {
+    padding: 0 !important;
+  }
+  .print\:max-w-none {
+    max-width: none !important;
+  }
+  .print\:bg-white {
+    background-color: white !important;
+  }
+  aside, nav, header, footer {
+    display: none !important;
+  }
+  @page {
+    size: A4;
+    margin: 0.5cm;
+  }
+  /* Preserve brand colors in print */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  /* Force the gold background to print */
+  .bg-\[\#FFD21A\] {
+    background-color: #FFD21A !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  /* Force royal blue backgrounds to print */
+  .bg-\[\#30369C\] {
+    background-color: #30369C !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .bg-\[\#28339A\] {
+    background-color: #28339A !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .bg-\[\#222222\] {
+    background-color: #222222 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .text-\[\#FFD21A\] {
+    color: #FFD21A !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .border-\[\#222222\] {
+    border-color: #222222 !important;
+  }
+  .border-\[\#30369C\] {
+    border-color: #30369C !important;
+  }
+}
